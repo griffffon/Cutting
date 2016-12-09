@@ -1,12 +1,27 @@
 /**
- * Created by gzelinskiy on 04.12.16.
+ * Created by Grigoriy on 18.12.2015.
  */
 var express = require('express');
-var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
-});
+module.exports = function(app) {
+    var bodyParser = require('body-parser');
+    app.use(bodyParser.urlencoded({extended: true, keepExtensions: true}));
 
-module.exports = router;
+    app.get('/', function(req, res) {
+        res.send('Test');
+    });
+};
+
+function isLoggedIn(req, res, next) {
+    /*Тут лучше обычная проверка, без демо*/
+    if (req.isAuthenticated()) {
+        if ((req.user.status !== 'active') && (!((req.user.plan === 'demo') && (req.user.status === 'blocked')))) {
+            req.logout();
+            res.redirect('/');
+        } else {
+            next();
+        }
+    } else {
+        res.redirect('/');
+    }
+}

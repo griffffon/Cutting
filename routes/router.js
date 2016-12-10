@@ -8,7 +8,15 @@ module.exports = function(app) {
     app.use(bodyParser.urlencoded({extended: true, keepExtensions: true}));
 
     app.get('/', function(req, res) {
-        res.send('Test');
+        res.render('pages/index');
+    });
+
+    app.get('/login', function(req, res) {
+        res.render('pages/login');
+    });
+
+    app.get('/forgot', function(req, res) {
+        res.render('pages/forgot');
     });
 };
 

@@ -164,7 +164,7 @@ if (cluster.isMaster) {
             err.status = 404;
             /*  eLogger.error('url 404:' + req.url);
              eLogger.error(err);*/
-            res.render('error404', {url: req.url});
+            res.render('pages/error404');
         } else {
             res.sendStatus(200);
         }
@@ -174,7 +174,7 @@ if (cluster.isMaster) {
         res.status(err.status || 500);
         // winston.error('Internal error(%d): %s', res.statusCode, err.message);
         eLogger.error(err);
-        res.render('error500', {
+        res.render('pages/error500', {
             code   : res.statusCode,
             message: err.message
         });

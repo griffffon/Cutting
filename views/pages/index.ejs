@@ -1,1 +1,269 @@
-Index
+<!doctype html>
+<html lang="en" class="fixed">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Helsinki</title>
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <!--load progress bar-->
+    <script src="vendor/pace/pace.min.js"></script>
+    <link href="vendor/pace/pace-theme-minimal.css" rel="stylesheet"/>
+
+    <!--BASIC css-->
+    <!-- ========================================================= -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="vendor/animate.css/animate.css">
+    <!--SECTION css-->
+    <!-- ========================================================= -->
+    <!--pNotify-->
+    <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
+    <!--Magnific popup-->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css">
+    <!--TEMPLATE css-->
+    <!-- ========================================================= -->
+    <link rel="stylesheet" href="stylesheets/css/style.css">
+
+
+</head>
+
+<body>
+<div class="wrap">
+    <!-- page HEADER -->
+    <!-- ========================================================= -->
+    <div class="page-header">
+        <!-- LEFTSIDE header -->
+        <div class="leftside-header">
+            <div class="logo">
+                <a href="index.html" class="on-click">
+                    <img alt="logo" src="images/header-logo.png"/>
+                </a>
+            </div>
+            <div id="menu-toggle" class="visible-xs toggle-left-sidebar" data-toggle-class="left-sidebar-open"
+                 data-target="html">
+                <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+            </div>
+        </div>
+    </div>
+    <!-- page BODY -->
+    <!-- ========================================================= -->
+    <div class="page-body">
+        <%- include ../partials/left_aside.ejs %>
+
+        <!-- CONTENT -->
+        <!-- ========================================================= -->
+        <div class="content">
+            <!-- content HEADER -->
+            <!-- ========================================================= -->
+            <div class="content-header">
+                <!-- leftside content header -->
+                <div class="leftside-content-header">
+                    <ul class="breadcrumbs">
+                        <li><i class="fa fa-home" aria-hidden="true"></i><a href="#">Робочий стіл</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <div class="row animated fadeInUp">
+                <div class="col-sm-12 col-lg-12">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4 class="section-subtitle"><b>Мої моделі</b></h4>
+                            <p class="section-text">Перелік моделей, з якими Ви працюєте</p>
+                            <div class="panel">
+                                <div class="panel-content">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped table-hover table-bordered text-center">
+                                            <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Age</th>
+                                                <th>Salary</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>Olivia Liang</td>
+                                                <td>Support Engineer</td>
+                                                <td>Singapore</td>
+                                                <td>64</td>
+                                                <td>$234,500</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bruno Nash</td>
+                                                <td>Software Engineer</td>
+                                                <td>London</td>
+                                                <td>38</td>
+                                                <td>$163,500</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sakura Yamamoto</td>
+                                                <td>Support Engineer</td>
+                                                <td>Tokyo</td>
+                                                <td>37</td>
+                                                <td>$139,575</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thor Walton</td>
+                                                <td>Developer</td>
+                                                <td>New York</td>
+                                                <td>61</td>
+                                                <td>$98,540</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Finn Camacho</td>
+                                                <td>Support Engineer</td>
+                                                <td>San Francisco</td>
+                                                <td>47</td>
+                                                <td>$87,500</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shad Decker</td>
+                                                <td>Regional Director</td>
+                                                <td>Edinburgh</td>
+                                                <td>51</td>
+                                                <td>$183,000</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Michael Bruce</td>
+                                                <td>Javascript Developer</td>
+                                                <td>Singapore</td>
+                                                <td>29</td>
+                                                <td>$183,000</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Donna Snider</td>
+                                                <td>Customer Support</td>
+                                                <td>New York</td>
+                                                <td>27</td>
+                                                <td>$112,000</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-xs">
+                                                        <button class="btn btn-transparent"><i class="fa fa-eye"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button class="btn btn-transparent"><i class="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+                        <!--WIDGETBOX-->
+
+                    </div>
+                </div>
+            </div>
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+        </div>
+        <!--scroll to top-->
+        <a href="#" class="scroll-to-top"><i class="fa fa-angle-double-up"></i></a>
+    </div>
+</div>
+<!--BASIC scripts-->
+<!-- ========================================================= -->
+<script src="vendor/jquery/jquery-1.12.3.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/nano-scroller/nano-scroller.js"></script>
+<!--TEMPLATE scripts-->
+<!-- ========================================================= -->
+<script src="javascripts/template-script.min.js"></script>
+<script src="javascripts/template-init.min.js"></script>
+<!-- SECTION script and examples-->
+<!-- ========================================================= -->
+<!--pNotify-->
+<script src="vendor/toastr/toastr.min.js"></script>
+<!--morris chart-->
+<script src="vendor/chart-js/chart.min.js"></script>
+<!--Gallery with Magnific popup-->
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!--Examples-->
+<script src="javascripts/examples/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/* HELPERS - DISPLAY &  POSITIONS*/
+/*================================================*/
+
+ //DISPLAY
+ //================================================
+ .d-ib {
+     display: inline-block;
+ }
+ 
+ .d-block {
+     display: block;
+ }
+ 
+ //POSITION
+ //================================================
+ .p-absolute {
+     position: absolute;
+ }
+ 
+ .p-relative {
+     position: relative;
+ }
+ 
+ .va-middle {
+     vertical-align: middle;
+ }

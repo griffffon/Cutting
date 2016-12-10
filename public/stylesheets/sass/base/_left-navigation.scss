@@ -1,0 +1,196 @@
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/* LEFT SIDEBAR NAVIGATION*/
+/*================================================*/
+ul#main-nav {
+    margin-right: 4px;
+    // MAIN ITEM (level 0)
+    //================================================
+    & > li {
+        border-bottom: 1px solid lighten($bg-left-sidebar, 4%);
+        // main item ACTIVE
+        &.active-item {
+            & > a {
+                box-shadow: 2px -1px 0 $color-primary inset !important;
+                border-bottom-left-radius: 5px;
+                background: darken($bg-left-sidebar, 5%);
+                color: $color-light !important;
+            }
+        }
+        // main item OPEN
+        &.open-item {
+            > a {
+                box-shadow: 0px -1px 0 $color-primary inset;
+                border-bottom-left-radius: 5px;
+                & > i {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    // ALL ITEMS
+    //================================================
+    li {
+        a {
+            padding: $width-padding-nav-level-0;
+            font-size: 13px;
+            color: $color-light;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            &:hover,
+            &:focus {
+                background: darken($bg-left-sidebar, 5%);
+            }
+        }
+        span {
+            vertical-align: middle;
+        }
+        i {
+            font-size: 18px;
+            margin-right: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        // ITEM - HAS CHILDREN
+        &.has-child-item {
+            position: relative;
+            // open-close symbol
+            >a:after {
+                font-family: 'FontAwesome';
+                @include font-size(10);
+                content: '\f067';
+                color: $color-light;
+                position: absolute;
+                padding: 14px;
+                right: 0;
+                top: 0;
+            }
+            &.open-item {
+                & > ul {
+                    &.child-nav {
+                        display: block;
+                    }
+                }
+                & > a:after {
+                    content: '\f068';
+                }
+            }
+        }
+    }
+    // SUB-NAVIGATION levels 1-3
+    //================================================
+    ul.child-nav {
+        border-radius: 5px;
+        display: none;
+        // LEVEL 1
+        &.level-1 {
+            background: darken($bg-left-sidebar, 4%);
+            box-shadow: 0px -5px 5px -3px rgba(0, 0, 0, 0.6) inset;
+            li {
+                a {
+                    padding: $width-padding-nav-level-1;
+                    &:hover,
+                    &:focus {
+                        background: darken($bg-left-sidebar, 8%);
+                    }
+                }
+            }
+        }
+        // LEVEL 2
+        &.level-2 {
+            background: darken($bg-left-sidebar, 7%);
+            box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.4) inset;
+            li {
+                a {
+                    padding: $width-padding-nav-level-2;
+                }
+            }
+        }
+        //LEVEL 3
+        &.level-3 {
+            background: darken($bg-left-sidebar, 10%);
+            box-shadow: 0px 0px 0px 5px #000 inset;
+            li {
+                a {
+                    padding: $width-padding-nav-level-3;
+                }
+            }
+        }
+    }
+}
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// left-sidebar COLLAPSED
+//================================================
+@media only screen and (min-width: 768px) {
+    html.left-sidebar-collapsed {
+        .left-sidebar {
+            #main-nav {
+                > li {
+                    &.open-item {
+                        > a {
+                            box-shadow: none;
+                        }
+                    }
+                    > a {
+                        overflow: hidden;
+                        text-overflow: clip;
+                        span {
+                            visibility: hidden;
+                        }
+                    }
+                }
+                li {
+                    &.has-child-item {
+                        a:after {
+                            display: none;
+                        }
+                        ul.child-nav {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            // HOVER LEFT SIDEBAR COLLAPSED
+            .nano {
+                &:hover {
+                    width: $width-left-sidebar-open;
+                    min-height: 100vh;
+                    background: rgba(32, 32, 32, 0.1);
+
+                    .nano-content{
+                        background: rgba(32, 32, 32, 0.9);
+                    }
+                    #main-nav {
+                        > li {
+                            &.open-item {
+                                > a {
+                                    box-shadow: 0px -1px 0 $color-primary inset;
+                                }
+                            }
+                            > a {
+                                overflow: visible;
+                                text-overflow: initial;
+                                span {
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                        li {
+                            &.has-child-item {
+                                a:after {
+                                    display: block;
+                                }
+                                &.open-item {
+                                    >ul.child-nav {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

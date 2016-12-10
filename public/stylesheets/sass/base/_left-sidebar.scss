@@ -1,0 +1,68 @@
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=*/
+/* LEFT SIDEBAR*/
+/*================================================*/
+.left-sidebar {
+    background: $bg-left-sidebar;
+    color: $color-light;
+    @include transition-property( width);
+    @include transition-duration( .25s);
+    @include transition-timing-function( ease-out);
+    @include transition-delay( 0);
+    .nano {
+        background: $bg-left-sidebar;
+    }
+    // left-sidebar HEADER
+    //================================================
+    .left-sidebar-header {
+        position: relative;
+        height: $height-left-sidebar-header;
+        background: $bg-left-sidebar-header;
+        .left-sidebar-title {
+            padding: 10px;
+            font-size: 10px;
+            color: $color-primary;
+            font-weight: bold;
+            height: $height-left-sidebar-header;
+            margin-right: $width-left-sidebar-collapsed;
+            @include transition-property( margin);
+            @include transition-duration( .25s);
+            @include transition-timing-function( ease-out);
+        }
+        .left-sidebar-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: $width-left-sidebar-collapsed;
+            height: $height-left-sidebar-header;
+            background-color: $bg-left-sidebar-toggle;
+            text-align: center;
+            cursor: pointer;
+            i {
+                font-size: 20px;
+                line-height: $height-left-sidebar-header;
+                &:hover {
+                    color: $color-scale-2;
+                }
+            }
+        }
+    }
+}
+
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// MOBILE VERSION 
+//================================================
+@media only screen and (max-width: 768px) {
+    .left-sidebar {
+        .left-sidebar-header {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html.left-sidebar-collapsed {
+        .left-sidebar-title {
+            opacity: 0;
+        }
+    }
+}
